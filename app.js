@@ -1,5 +1,20 @@
 function bump(x){
-
+    let myArr = x.split(""); // split into array
+    let bumps = 0; // count bumps
+    let flats = 0; // count flats
+    for(let i = 0; i < x.length;i++){
+        if(myArr[i] == "n"){
+            bumps = bumps + 1; // count bumps
+        } else {
+            flats = flats + 1; // count flats
+        }
+    }
+    // Return winner
+    if(bumps > 15){
+        return "Car Dead"
+    } else {
+        return "Woohooo!"
+    }
 }
 
 console.log(bump("n")); // "Woohoo!"
